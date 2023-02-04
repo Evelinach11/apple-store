@@ -1,0 +1,16 @@
+.product__images__list {
+  display: flex;
+  flex-direction: column;
+  height: 30%;
+  width: 30%;
+}
+.product__images__list__item {
+  height: 30%;
+  width: 30%;
+}
+.product__images__main {
+  position: relative;
+  height: 300px;
+  width: 500px;
+  padding: 0;
+}
