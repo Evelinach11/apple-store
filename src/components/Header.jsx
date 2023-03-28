@@ -1,6 +1,6 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-
+import UserModal from "./modals/UserModal";
 import logo from "../assets/images/Logo-2.png";
 
 const mainNav = [
@@ -23,6 +23,12 @@ const mainNav = [
 ];
 
 const Header = () => {
+  const [modal, setModal] = useState(false);
+
+  const toggleModal = () => {
+    console.log("jjj");
+    setModal(!modal);
+  };
   const { pathname } = useLocation();
   const activeNav = mainNav.findIndex((e) => e.path === pathname);
 
@@ -88,7 +94,8 @@ const Header = () => {
               </Link>
             </div>
             <div className="header__menu__item header__menu__right__item">
-              <i className="bx bx-user"></i>
+              <i onClick={toggleModal} className="bx bx-user"></i>
+              <UserModal modal={modal} />
             </div>
           </div>
         </div>
