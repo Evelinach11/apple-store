@@ -1,14 +1,8 @@
 import { Link } from "react-router-dom";
+
 function UserModal({ modal, backgroundColor, size, animate }) {
-  console.log(modal);
-  if (modal) {
-    document.body.classList.add("active-modal");
-  } else {
-    document.body.classList.remove("active-modal");
-  }
   const btnBg = backgroundColor ? "bg-" + backgroundColor : "bg-main";
   const btnSize = size ? "btn-" + size : "";
-
   const btnAnimate = animate ? "btn-animate" : "";
 
   return (

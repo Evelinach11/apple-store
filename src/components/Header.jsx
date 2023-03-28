@@ -26,7 +26,6 @@ const Header = () => {
   const [modal, setModal] = useState(false);
 
   const toggleModal = () => {
-    console.log("jjj");
     setModal(!modal);
   };
   const { pathname } = useLocation();
