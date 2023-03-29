@@ -16,7 +16,7 @@ const Layout = () => {
           <div>
             <Header {...props} />
 
-            <div>
+            <div className="container">
               <div className="main">
                 <Routes />
               </div>

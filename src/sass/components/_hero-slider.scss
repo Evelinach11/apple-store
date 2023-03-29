@@ -1,5 +1,5 @@
 .hero-slider {
-  height: 80vh;
+  height: 65vh;
   max-height: 1080px;
   display: block;
   overflow: hidden;
@@ -7,16 +7,14 @@
   margin-bottom: 50px;
 
   @include tablet {
-    margin-top: calc(#{$header-tablet-height} * -1);
   }
 
   @include mobile {
-    margin-top: calc(#{$header-mobile-height} * -1);
+    height: 500px;
   }
 
   &__item {
     @include flex(center, space-between);
-
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -28,7 +26,6 @@
     }
 
     @include mobile {
-      padding-top: 150px;
     }
 
     &.active {
@@ -62,8 +59,9 @@
         overflow: hidden;
 
         @include mobile {
-          font-size: 2.5rem;
-          line-height: 3.75rem;
+          padding-top: 50px;
+          font-size: 2rem;
+          line-height: 3rem;
         }
       }
 
@@ -120,7 +118,6 @@
         height: 62vh;
         position: absolute;
         z-index: 95;
-        margin-bottom: 150px;
         bottom: 0;
         right: 50px;
         transform: scale(0) rotate(65deg);
@@ -130,12 +127,16 @@
           height: 100%;
           position: relative;
         }
+        @include mobile {
+          left: 15px;
+          height: 75%;
+        }
       }
       .header_hero_slider_img2 {
         height: 60vh;
         position: absolute;
         z-index: 95;
-        margin-bottom: 150px;
+
         bottom: 0;
         right: 0;
         transform: scale(0) rotate(65deg);
@@ -145,12 +146,14 @@
           height: 100%;
           position: relative;
         }
+        @include mobile {
+          height: 75%;
+        }
       }
       .header_hero_slider_img3 {
         height: 52vh;
         z-index: 95;
         position: absolute;
-        margin-bottom: 200px;
         bottom: 0;
         right: 50px;
         transform: scale(0) rotate(65deg);
@@ -159,6 +162,10 @@
         @include tablet {
           height: 100%;
           position: relative;
+        }
+        @include mobile {
+          left: 15px;
+          height: 70%;
         }
       }
       .shape {
@@ -198,6 +205,9 @@
 
     @include tablet {
       bottom: 20px;
+    }
+    @include mobile {
+      bottom: 150px;
     }
 
     &__item ~ &__item {
