@@ -1,20 +1,24 @@
 .user__modal {
-  display: flex;
-  flex-direction: row;
+  position: fixed;
+  z-index: 100;
+  margin-top: 300px;
+  margin-right: 125px;
   text-align: center;
   background-color: white;
-  height: 150px;
+  padding: 30px;
+  height: 230px;
   width: 200px;
-
   border: 1px solid;
   border-radius: 5px;
 }
 .user__registration {
+  padding-top: 30px;
   display: flex;
   flex-direction: column;
   justify-self: start;
   font-size: 17px;
+  text-decoration: underline;
 }
 .user__sign {
-  font-size: 17px;
+  font-size: 25px;
 }

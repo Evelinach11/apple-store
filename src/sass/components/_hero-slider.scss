@@ -1,10 +1,10 @@
 .hero-slider {
-  height: 100vh;
+  height: 80vh;
   max-height: 1080px;
+  display: block;
   overflow: hidden;
   position: relative;
   margin-bottom: 50px;
-  margin-top: calc(#{$header-height} * -1);
 
   @include tablet {
     margin-top: calc(#{$header-tablet-height} * -1);
@@ -25,12 +25,10 @@
 
     @include tablet {
       flex-direction: column-reverse;
-      padding-top: $header-tablet-height;
     }
 
     @include mobile {
-      padding-top: unset;
-      padding-bottom: 40px;
+      padding-top: 150px;
     }
 
     &.active {
@@ -103,10 +101,11 @@
     }
 
     &__image {
+      display: block;
       flex-grow: 1;
       position: relative;
       height: 100%;
-      z-index: 99;
+      z-index: 96;
       pointer-events: none;
 
       @include tablet {
@@ -120,6 +119,7 @@
       .header_hero_slider_img1 {
         height: 62vh;
         position: absolute;
+        z-index: 95;
         margin-bottom: 150px;
         bottom: 0;
         right: 50px;
@@ -134,6 +134,7 @@
       .header_hero_slider_img2 {
         height: 60vh;
         position: absolute;
+        z-index: 95;
         margin-bottom: 150px;
         bottom: 0;
         right: 0;
@@ -147,6 +148,7 @@
       }
       .header_hero_slider_img3 {
         height: 52vh;
+        z-index: 95;
         position: absolute;
         margin-bottom: 200px;
         bottom: 0;
@@ -161,6 +163,7 @@
       }
       .shape {
         $size: 472px;
+        z-index: 90;
         height: $size;
         width: $size;
         position: absolute;
