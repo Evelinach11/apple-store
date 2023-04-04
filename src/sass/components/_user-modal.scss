@@ -1,0 +1,175 @@
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  transform-style: preserve-3d;
+  transition: 1s;
+  cursor: pointer;
+  transform: perspective(1000px) rotateY(var(--rotate-y, 0))
+    translateY(var(--translate-y, 0));
+}
+
+.card:hover {
+  --translate-y: -2px;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.card.flip {
+  --rotate-y: 180deg;
+}
+
+.card .front {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: white;
+  border-radius: 5px;
+  border: solid 0.5px black;
+  margin-top: 300px;
+  width: 200px;
+  height: 250px;
+  right: 10px;
+}
+.card .back {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: white;
+  background-color: white;
+  border-radius: 5px;
+  border: solid 0.5px black;
+  margin-top: 300px;
+  width: 200px;
+  height: 250px;
+  left: 10px;
+}
+
+.card .front,
+.card .back {
+  position: absolute;
+  padding: 1rem;
+  backface-visibility: hidden;
+}
+
+.card .back {
+  transform: rotateY(180deg);
+}
+
+.user__sign {
+  font-size: 25px;
+}
+
+.have-account {
+  padding-top: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 15px;
+}
+.go-to {
+  padding-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 16px;
+}
+.reg-btn {
+  padding: 5px;
+  font-size: 15px;
+  background-color: black;
+}
+.reg-btn:hover {
+  background-color: #5e9299;
+}
+
+.login-btn {
+  margin-top: 15px;
+  padding: 5px;
+  font-size: 15px;
+  background-color: black;
+}
+.login-btn:hover {
+  background-color: #5e9299;
+}
+
+.input-back {
+  margin-top: 10px;
+}
+input {
+  border: none;
+  border-bottom: 1px solid black;
+}
+input::placeholder {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.profile-card {
+  position: fixed;
+  margin-top: 350px;
+  margin-right: 150px;
+  width: 250px;
+  height: 300px;
+  background-color: white;
+  border-radius: 30px;
+  border: solid 10px whitesmoke;
+  text-align: center;
+}
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+.profile-user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid grey;
+}
+.profile-greting {
+  font-size: 25px;
+}
+.profile-name {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.profile-body-main {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+  border-bottom: 1px solid grey;
+}
+.profile-bonus {
+  font-size: 15px;
+}
+.bonus {
+  background-color: #5e9299;
+  color: white;
+  border: 0;
+  border-radius: 30px;
+  padding: 2px;
+}
+.profile {
+  font-size: 15px;
+  text-decoration: underline;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.profile-logOut {
+  color: white;
+  background-color: #5e9299;
+  padding: 5px;
+  font-size: 20px;
+  width: 80%;
+  border: 0;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
