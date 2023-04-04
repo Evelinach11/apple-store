@@ -27,10 +27,10 @@ const Header = () => {
 
   const toggleModal = () => {
     setModal(!modal);
+    console.log(modal);
   };
   const { pathname } = useLocation();
   const activeNav = mainNav.findIndex((e) => e.path === pathname);
-
   const headerRef = useRef(null);
 
   useEffect(() => {
