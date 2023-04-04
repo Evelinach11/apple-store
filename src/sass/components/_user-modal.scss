@@ -105,3 +105,71 @@ input::placeholder {
   font-size: 12px;
   text-transform: uppercase;
 }
+
+.profile-card {
+  position: fixed;
+  margin-top: 350px;
+  margin-right: 150px;
+  width: 250px;
+  height: 300px;
+  background-color: white;
+  border-radius: 30px;
+  border: solid 10px whitesmoke;
+  text-align: center;
+}
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+.profile-user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid grey;
+}
+.profile-greting {
+  font-size: 25px;
+}
+.profile-name {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.profile-body-main {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+  border-bottom: 1px solid grey;
+}
+.profile-bonus {
+  font-size: 15px;
+}
+.bonus {
+  background-color: #5e9299;
+  color: white;
+  border: 0;
+  border-radius: 30px;
+  padding: 2px;
+}
+.profile {
+  font-size: 15px;
+  text-decoration: underline;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.profile-logOut {
+  color: white;
+  background-color: #5e9299;
+  padding: 5px;
+  font-size: 20px;
+  width: 80%;
+  border: 0;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
